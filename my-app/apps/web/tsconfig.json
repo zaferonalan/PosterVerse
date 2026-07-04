@@ -1,6 +1,8 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "composite": false,
+    "declarationMap": false,
     "jsx": "preserve",
     "noEmit": true,
     "emitDeclarationOnly": false,
@@ -19,10 +21,18 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@my-app/ui": ["../../packages/ui/src/index.ts"],
+      "@my-app/ui/*": ["../../packages/ui/src/*"],
+      "@my-app/ui/components": ["../../packages/ui/src/components"],
+      "@my-app/ui/components/*": ["../../packages/ui/src/components/*"],
+      "@my-app/ui/components/ui/*": ["../../packages/ui/src/components/ui/*"],
+      "@my-app/ui/lib/utils": ["../../packages/ui/src/lib/utils.ts"],
+      "@my-app/ui/lib/*": ["../../packages/ui/src/lib/*"],
+      "@my-app/ui/hooks/*": ["../../packages/ui/src/hooks/*"]
     },
-    "outDir": "dist",
-    "rootDir": "src",
+    // "outDir": "dist",
+    // "rootDir": "src",
     "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo"
   },
   "include": [
@@ -46,5 +56,10 @@
     "eslint.config.js",
     "eslint.config.cjs",
     "eslint.config.mjs"
+  ],
+  "references": [
+    {
+      "path": "../../packages/ui"
+    }
   ]
 }

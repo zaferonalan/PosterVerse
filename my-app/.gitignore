@@ -7,6 +7,7 @@ out-tsc
 
 # dependencies
 node_modules
+packages/database/src/generated/
 
 # IDEs and editors
 /.idea

@@ -6,8 +6,8 @@
     "importHelpers": true,
     "isolatedModules": true,
     "lib": ["es2022"],
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
@@ -16,6 +16,15 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "es2022",
-    "customConditions": ["@my-app/source"]
-  }
+    "customConditions": ["@my-app/source"],
+    "paths": {
+      "@my-app/ui": ["packages/ui/src/index.ts"],
+      "@my-app/ui/*": ["packages/ui/src/*"],
+      "@my-app/database": ["packages/database/src/index.ts"],
+      "@my-app/database/*": ["packages/database/src/*"],
+      "@my-app/schemas": ["packages/schemas/src/index.ts"],
+      "@my-app/schemas/*": ["packages/schemas/src/*"]
+    }
+  },
+  
 }

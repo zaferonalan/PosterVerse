@@ -6,8 +6,17 @@
     "module": "commonjs",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "paths": {
+      "@my-app/schemas": ["../../packages/schemas/src/index.ts"],
+      "@my-app/schemas/": ["../../packages/schemas/src/schemas/"]
+    }
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules", "dist"],
+  "references": [
+    {
+      "path": "../../packages/database"
+    }
+  ]
 }

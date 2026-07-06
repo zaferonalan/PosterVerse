@@ -1,6 +1,8 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
     "composite": false,
     "declarationMap": false,
     "jsx": "preserve",
@@ -29,7 +31,9 @@
       "@my-app/ui/components/ui/*": ["../../packages/ui/src/components/ui/*"],
       "@my-app/ui/lib/utils": ["../../packages/ui/src/lib/utils.ts"],
       "@my-app/ui/lib/*": ["../../packages/ui/src/lib/*"],
-      "@my-app/ui/hooks/*": ["../../packages/ui/src/hooks/*"]
+      "@my-app/ui/hooks/*": ["../../packages/ui/src/hooks/*"],
+      "@my-app/schemas": ["../../packages/schemas/src/index.ts"],
+      "@my-app/schemas/": ["../../packages/schemas/src/schemas/"]
     },
     // "outDir": "dist",
     // "rootDir": "src",

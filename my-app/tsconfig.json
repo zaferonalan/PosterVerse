@@ -14,6 +14,12 @@
     },
     {
       "path": "./packages/schemas"
+    },
+    {
+      "path": "./packages/backend/auth"
+    },
+    {
+      "path": "./packages/config"
     }
   ]
 }

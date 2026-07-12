@@ -1,6 +1,9 @@
 packages:
   - 'packages/*'
   - 'apps/*'
+  - 'packages/backend/*'
+  - 'backend/shared/*'
+  - 'packages/backend/shared/*'
 autoInstallPeers: true
 onlyBuiltDependencies:
   - 'nx'
